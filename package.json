@@ -1,0 +1,34 @@
+{
+  "name": "node-lib-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A project template for JS libraries to be published to NPM",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard 'lib/**/*.js' 'test/**/*.js'",
+    "test": "node test/index.js",
+    "release": "npm run lint && npm run test && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axelpale/node-lib-template.git"
+  },
+  "keywords": [
+    "template",
+    "library",
+    "node"
+  ],
+  "author": {
+    "name": "John Doe",
+    "email": "john.doe@example.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axelpale/node-lib-template/issues"
+  },
+  "homepage": "https://github.com/axelpale/node-lib-template",
+  "devDependencies": {
+    "standard": "^16.0.4",
+    "tape": "^5.3.1"
+  }
+}
