@@ -1,4 +1,4 @@
-import { default as test } from 'tape'
+import { test } from 'tape'
 import * as lib from '../index.js'
 
 test('basic fitArray', (t) => {
