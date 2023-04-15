@@ -1,4 +1,9 @@
-# Logs
+# Bundle builds
+/dist/*
+!/dist/.gitkeep
+/test/dist/*
+!/test/dist/.gitkeep
+
 logs
 *.log
 
