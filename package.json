@@ -1,9 +1,10 @@
 {
-  "name": "node-lib-template",
-  "version": "1.0.0",
+  "name": "squaretext",
+  "version": "0.0.1",
   "private": true,
-  "description": "A project template for JS libraries to be published to NPM",
+  "description": "Lay text out so that it fits a square. Great for graph node labels.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "lint": "standard 'lib/**/*.js' 'test/**/*.js'",
     "test": "node test/index.js",
@@ -11,22 +12,28 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/axelpale/node-lib-template.git"
+    "url": "git+https://github.com/axelpale/squaretext.git"
   },
   "keywords": [
-    "template",
-    "library",
-    "node"
+    "square",
+    "text",
+    "layout",
+    "typography",
+    "lines",
+    "geometry",
+    "graph",
+    "node",
+    "visualization"
   ],
   "author": {
-    "name": "John Doe",
-    "email": "john.doe@example.com"
+    "name": "Akseli Palén",
+    "email": "akseli.palen@gmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/axelpale/node-lib-template/issues"
+    "url": "https://github.com/axelpale/squaretext/issues"
   },
-  "homepage": "https://github.com/axelpale/node-lib-template",
+  "homepage": "https://github.com/axelpale/squaretext",
   "devDependencies": {
     "standard": "^16.0.4",
     "tape": "^5.3.1"
