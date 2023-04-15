@@ -1,2 +1,1 @@
-// Lib root
-exports.hello = require('./lib/hello')
+export * from './lib/index.js'
