@@ -4,7 +4,11 @@
   <meta charset="utf-8">
   <title>Showcase - textsquare.js</title>
   <style>
-  p { outline: 1px solid red; text-align: justify; margin: 0 0 1rem 0; }
+    p {
+      outline: 1px solid red;
+      text-align: justify;
+      margin: 0 0 1rem 0;
+    }
   </style>
   <script defer src="../dist/squaretext.min.js"></script>
   <script>
@@ -26,6 +30,10 @@
       document.body.appendChild(p)
 
       txt = 'Lorem ipsum'
+      p = squaretext.fitParagraph(txt, 200, 'Arial')
+      document.body.appendChild(p)
+
+      txt = 'Hyphenation'
       p = squaretext.fitParagraph(txt, 200, 'Arial')
       document.body.appendChild(p)
 
