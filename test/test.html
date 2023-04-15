@@ -4,64 +4,64 @@
   <meta charset="utf-8">
   <title>Test suite - squaretext.js</title>
   <style>
+    section {
+      display: flex;
+      flex-flow: row wrap;
+    }
+    .square {
+      outline: 1px solid green;
+      margin: 0 20px 20px 0;
+    }
     p {
       outline: 1px solid red;
-      text-align: justify;
-      margin: 0 0 1rem 0;
+      margin: 0;
       font-family: "Times New Roman", Times, serif;
     }
   </style>
   <script defer src="../dist/squaretext.min.js"></script>
   <script>
-    const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo, arcu non elementum scelerisque, neque lorem sagittis ligula, at congue leo urna id neque. In dui arcu, faucibus non tellus ac, finibus facilisis enim. Donec commodo ex vel erat rhoncus imperdiet. Ut nec ligula nec metus lacinia sagittis vel vitae tellus. Quisque dignissim egestas nulla id facilisis. Vivamus dolor erat, euismod vel sagittis sed, molestie ac turpis. Nulla facilisi. Sed dapibus augue lacinia laoreet ornare. Nullam luctus aliquet dui. Aliquam nec ante sagittis est imperdiet posuere in at elit. Aenean eu lectus dignissim, aliquet nisi at, congue odio. Aenean varius leo eget nisi placerat consequat. Fusce eget dolor viverra, viverra libero id, euismod magna. Etiam efficitur maximus lectus sed venenatis. Vivamus rhoncus pulvinar dolor, pharetra volutpat velit placerat eu.'
-
     document.addEventListener('DOMContentLoaded', () => {
+      const header = document.body.querySelector('header')
+      const section = document.body.querySelector('section')
+
       const h = document.createElement('h1')
-      h.innerText = 'squaretest v' + squaretext.version
-      document.body.appendChild(h)
+      h.innerText = 'squaretext v' + squaretext.version
+      header.appendChild(h)
 
-      let txt, p
+      const test = (txt, size = 200) => {
+        const square = document.createElement('div')
+        square.className = 'square'
+        square.style.width = size + 'px'
+        square.style.height = size + 'px'
+        // Unit
+        const p = squaretext.fitParagraph(txt, size, 'Times New Roman')
+        square.appendChild(p)
+        section.appendChild(square)
+      }
 
-      txt = 'L'
-      p = squaretext.fitParagraph(txt, 200, 'Times New Roman')
-      document.body.appendChild(p)
+      test('L')
+      test('Lo')
+      test('Lorem')
+      test('Lorem ipsum')
+      test('Hyphenation')
+      test('A hyphenation')
+      test('Some characters')
+      test('Lorem ipsum dolor sit amet.')
+      test('Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+      test('llllllllllllllllllllllllllllllllllllllllllllllll')
+      test('mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm')
 
-      txt = 'Lo'
-      p = squaretext.fitParagraph(txt, 200, 'Times New Roman')
-      document.body.appendChild(p)
+      const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo, arcu non elementum scelerisque, neque lorem sagittis ligula, at congue leo urna id neque. In dui arcu, faucibus non tellus ac, finibus facilisis enim. Donec commodo ex vel erat rhoncus imperdiet. Ut nec ligula nec metus lacinia sagittis vel vitae tellus. Quisque dignissim egestas nulla id facilisis. Vivamus dolor erat, euismod vel sagittis sed, molestie ac turpis. Nulla facilisi. Sed dapibus augue lacinia laoreet ornare. Nullam luctus aliquet dui. Aliquam nec ante sagittis est imperdiet posuere in at elit. Aenean eu lectus dignissim, aliquet nisi at, congue odio. Aenean varius leo eget nisi placerat consequat. Fusce eget dolor viverra, viverra libero id, euismod magna. Etiam efficitur maximus lectus sed venenatis. Vivamus rhoncus pulvinar dolor, pharetra volutpat velit placerat eu.'
 
-      txt = 'Lorem'
-      p = squaretext.fitParagraph(txt, 200, 'Times New Roman')
-      document.body.appendChild(p)
-
-      txt = 'Lorem ipsum'
-      p = squaretext.fitParagraph(txt, 200, 'Times New Roman')
-      document.body.appendChild(p)
-
-      txt = 'Hyphenation'
-      p = squaretext.fitParagraph(txt, 200, 'Times New Roman')
-      document.body.appendChild(p)
-
-      txt = 'Lorem ipsum dolor sit amet.'
-      p = squaretext.fitParagraph(txt, 200, 'Times New Roman')
-      document.body.appendChild(p)
-
-      txt = 'llllllllllllllllllllllllllllllllllllllllllllllll'
-      p = squaretext.fitParagraph(txt, 200, 'Times New Roman')
-      document.body.appendChild(p)
-
-      txt = 'mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm'
-      p = squaretext.fitParagraph(txt, 200, 'Times New Roman')
-      document.body.appendChild(p)
-
-      p = squaretext.fitParagraph(lorem, 200, 'Times New Roman')
-      document.body.appendChild(p)
-
-      p = squaretext.fitParagraph(lorem, 400, 'Times New Roman')
-      document.body.appendChild(p)
+      test(lorem)
+      test(lorem, 420)
     })
   </script>
 </head>
 <body>
+  <header>
+  </header>
+  <section>
+  </section>
 </body>
 </html>
