@@ -1,8 +1,10 @@
 # squaretext
 
-This module takes a string of text and attempts to break it into lines so that it fits a square nicely. The square has width equal to height, and due to the symmetry, square objects are easy to roughly fit into other shapes such as circles or stars.
+This module takes a string of text and attempts to break it into lines so that it fits a square nicely. The square has width equal to height, and due to this symmetry, square-formatted text is easy to place into shapes such as circles or stars without sacrificing readability.
 
 The main use case includes the labels of nodes in a network visualization. The nodes usually have a round shape and textual labels in various lengths. Therefore a piece of text composed into square will fit the node nicely.
+
+The lib is designed for client-side applications. It requires the browser to support [TextMetrics Web API](https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics).
 
 ## Install
 
@@ -14,31 +16,26 @@ The main use case includes the labels of nodes in a network visualization. The n
 
 Just do a simple function call:
 ```
-> import squaretext
-> squaretext.fitParagraph('Fit me inside a square', 200)
+> import fitParagraph from 'squaretext'
+> fitParagraph('Fit me inside a square', 200)
 '<p style="padding: 0; margin: 0; line-height: 1em;font-size: 28.6px;">Fit me <br>inside <br>a squar<br>e</p>'
 ```
 
 ## API
 
-### squaretext.fitArray(str[, ratio=2])
+### squaretext.fitParagraph(str, width[, fontName[, fontStyle]])
 
-**Parameters:**
-
-- str: a string
-- ratio: optional number, ratio between line width and the number of lines.
-
-**Return:** an array of strings
-
-### squaretext.fitParagraph(str, width[, ratio=2])
+Place the text into a paragraph and adjust the font size so that the text flows roughly into a square shape.
 
 **Parameters:**
 
 - str: a string
 - width: an integer, the paragraph width in pixels.
-- ratio: optional number, ratio between line width and the number of lines.
+- fontName: optional string, the font name. Default is 'sans-serif'.
+- fontStyle: optional string, the font style. Default is ''.
 
-**Return:** an array of strings
+**Return:** a paragraph HTMLElement
+
 
 ## Contribute
 
