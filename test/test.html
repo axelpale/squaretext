@@ -8,22 +8,29 @@
   </style>
   <script defer src="../dist/squaretext.min.js"></script>
   <script>
-    const words2 = 'Lorem ipsum'
-    const words5 = 'Lorem ipsum dolor sit amet.'
     const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo, arcu non elementum scelerisque, neque lorem sagittis ligula, at congue leo urna id neque. In dui arcu, faucibus non tellus ac, finibus facilisis enim. Donec commodo ex vel erat rhoncus imperdiet. Ut nec ligula nec metus lacinia sagittis vel vitae tellus. Quisque dignissim egestas nulla id facilisis. Vivamus dolor erat, euismod vel sagittis sed, molestie ac turpis. Nulla facilisi. Sed dapibus augue lacinia laoreet ornare. Nullam luctus aliquet dui. Aliquam nec ante sagittis est imperdiet posuere in at elit. Aenean eu lectus dignissim, aliquet nisi at, congue odio. Aenean varius leo eget nisi placerat consequat. Fusce eget dolor viverra, viverra libero id, euismod magna. Etiam efficitur maximus lectus sed venenatis. Vivamus rhoncus pulvinar dolor, pharetra volutpat velit placerat eu.'
 
     document.addEventListener('DOMContentLoaded', () => {
-      let p
-      p = squaretext.fitParagraph(words2, 200, 'Arial')
+      let txt, p
+
+      txt = 'L'
+      p = squaretext.fitParagraph(txt, 200, 'Arial')
       document.body.appendChild(p)
 
-      p = squaretext.fitParagraph(words2, 400, 'Arial')
+      txt = 'Lo'
+      p = squaretext.fitParagraph(txt, 200, 'Arial')
       document.body.appendChild(p)
 
-      p = squaretext.fitParagraph(words5, 200, 'Arial')
+      txt = 'Lorem'
+      p = squaretext.fitParagraph(txt, 200, 'Arial')
       document.body.appendChild(p)
 
-      p = squaretext.fitParagraph(words5, 400, 'Arial')
+      txt = 'Lorem ipsum'
+      p = squaretext.fitParagraph(txt, 200, 'Arial')
+      document.body.appendChild(p)
+
+      txt = 'Lorem ipsum dolor sit amet.'
+      p = squaretext.fitParagraph(txt, 200, 'Arial')
       document.body.appendChild(p)
 
       p = squaretext.fitParagraph(lorem, 200, 'Arial')
