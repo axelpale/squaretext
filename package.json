@@ -1,6 +1,6 @@
 {
   "name": "squaretext",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Lay text out so that it fits a square. Great for graph node labels.",
   "main": "index.js",
   "type": "module",
