@@ -6,12 +6,13 @@
   "type": "module",
   "scripts": {
     "build": "webpack",
+    "build:production": "webpack --mode production",
     "build:watch": "webpack --watch",
     "gv": "genversion --es6 lib/version.js",
     "lint": "standard 'lib/**/*.js' && echo 'OK'",
     "test:browser": "open -a \"Google Chrome\" test/test.html",
     "test": "npm run lint",
-    "release": "npm run gv && npm run lint && npm run test && npm publish"
+    "release": "npm run gv && npm run lint && npm run test && npm run build:production && npm publish"
   },
   "repository": {
     "type": "git",
