@@ -1,0 +1,10 @@
+.travis.yml
+
+/dist/.gitkeep
+/doc
+/test
+
+.editorconfig
+.DS_Store
+.gitignore
+package-lock.json
