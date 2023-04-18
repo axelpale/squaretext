@@ -29,16 +29,16 @@ HTMLElement <p style="width: 200px; padding: 0; font-size: 42.3px; line-height: 
 
 ### squaretext.fitParagraph(str, width[, fontName[, fontStyle]])
 
-Place the text into a paragraph and adjust the paragraph font size and line height so that the text flows roughly into a square shape.
+Place the text into a paragraph and adjust the paragraph font size and line height so that the text flows roughly into a square shape. The font dimensions are computed based on the given font family name and style.
 
 **Parameters:**
 
 - str: a string
 - width: an integer, the paragraph width in pixels.
-- fontName: optional string, the [font family name](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family). Default is 'sans-serif'.
-- fontStyle: optional string, the [font style](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style) e.g 'italics'. Default is ''.
+- fontName: optional string, the [font family name](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family). Names containing whitespace should be quoted, for example `"Comic Sans MS"`. The default is `sans-serif`.
+- fontStyle: optional string, the [font style](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style) e.g `italics`. Default is an empty string.
 
-**Return:** a paragraph HTMLElement
+**Return:** HTMLElement, the paragraph element with inline styles.
 
 
 ## Contribute
