@@ -21,22 +21,22 @@ The package is designed for client-side web applications. It requires the browse
 Just do a simple function call:
 ```
 > import fitParagraph from 'squaretext'
-> fitParagraph('Fit me inside a square', 200)
-'<p style="padding: 0; margin: 0; line-height: 1em;font-size: 28.6px;">Fit me <br>inside <br>a squar<br>e</p>'
+> fitParagraph('Fit me inside a square!', 200, 'Arial')
+HTMLElement <p style="width: 200px; padding: 0; font-size: 42.3px; line-height: 52.9px;">Fit me inside a square!</p>
 ```
 
 ## API
 
 ### squaretext.fitParagraph(str, width[, fontName[, fontStyle]])
 
-Place the text into a paragraph and adjust the font size so that the text flows roughly into a square shape.
+Place the text into a paragraph and adjust the paragraph font size and line height so that the text flows roughly into a square shape.
 
 **Parameters:**
 
 - str: a string
 - width: an integer, the paragraph width in pixels.
-- fontName: optional string, the font name. Default is 'sans-serif'.
-- fontStyle: optional string, the font style. Default is ''.
+- fontName: optional string, the [font family name](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family). Default is 'sans-serif'.
+- fontStyle: optional string, the [font style](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style) e.g 'italics'. Default is ''.
 
 **Return:** a paragraph HTMLElement
 
