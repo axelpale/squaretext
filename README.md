@@ -1,10 +1,14 @@
 # squaretext
 
-This module takes a string of text and attempts to break it into lines so that it fits a square nicely. The square has width equal to height, and due to this symmetry, square-formatted text is easy to place into shapes such as circles or stars without sacrificing readability.
+![squaretext sample](doc/squaretext_sample_lorem_ipsum_3x2.png?raw=true)
 
-The main use case includes the labels of nodes in a network visualization. The nodes usually have a round shape and textual labels in various lengths. Therefore a piece of text composed into square will fit the node nicely.
+[![NPM version](https://img.shields.io/npm/v/squaretext?color=7FCD0F)](https://www.npmjs.com/package/squaretext)
 
-The lib is designed for client-side applications. It requires the browser to support [TextMetrics Web API](https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics).
+This package takes a string of text and breaks it into lines so that it fits a square nicely. The square has width equal to height what makes it easy to place square-formatted text into shapes such as circles or stars without sacrificing readability.
+
+The main use cases include the labels of nodes in a network visualization. The nodes usually have a round shape and textual labels in various lengths. Therefore a piece of text composed into square will fit the node nicely.
+
+The package is designed for client-side web applications. It requires the browser to support [TextMetrics Web API](https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics).
 
 ## Install
 
