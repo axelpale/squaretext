@@ -27,7 +27,7 @@ $ yarn add squaretext
 Via [unpkg](https://www.unpkg.com/browse/squaretext@0.2.0/):
 
 ```
-<script src="https://unpkg.com/squaretext@0.2.0/dist/tapspace.min.js"></script>
+<script src="https://unpkg.com/squaretext@0.2.0/dist/squaretext.min.js"></script>
 ```
 
 ## Usage
