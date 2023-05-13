@@ -18,6 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/axelpale/squaretext.git"
   },
+  "unpkg": "dist/squaretext.min.js",
   "keywords": [
     "square",
     "text",

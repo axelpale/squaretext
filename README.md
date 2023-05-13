@@ -12,8 +12,22 @@ The package is designed for client-side web applications. It requires the browse
 
 ## Install
 
+Via [npm](https://www.npmjs.com/package/squaretext)
+
 ```
-> npm install squaretext
+$ npm install squaretext
+```
+
+Via [yarn](https://yarnpkg.com/en/package/squaretext):
+
+```
+$ yarn add squaretext
+```
+
+Via [unpkg](https://www.unpkg.com/browse/squaretext@0.2.0/):
+
+```
+<script src="https://unpkg.com/squaretext@0.2.0/dist/tapspace.min.js"></script>
 ```
 
 ## Usage
